@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | NFT preview card component</title>
@@ -15,7 +16,7 @@
     
   </style>
 </head>
-<body>
+<bo
   <div class="card">
     <!-- <img class="image img-hover" src="./images/image-equilibrium.jpg"> -->
     <div class="image">
@@ -26,7 +27,7 @@
       <div class="middle">
         <img class="view" src="./images/icon-view.svg">
       </div>
-      <div class="background"></div>
+      <!-- <div class="background"></div> -->
   </div>
     <div class = "written">
       <h3><span>Equilibrium #3429 </span></h3>
@@ -59,11 +60,10 @@
 </body>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400&family=Poppins:wght@200;500&display=swap');
 
   body{
     background-color: hsl(217, 54%, 11%);
-    font-family: Poppins;
+    font-family: 'Outfit', 'sans-serif';
     color: white;
   }
 
@@ -96,7 +96,7 @@
       opacity: 1;
     }
 
-  .image{
+    .image{
      position: relative;
    }
    .view{
@@ -123,16 +123,18 @@
      background-color: #00FFF7;
      display: none;
      position: relative;
-     height: 276px;
-     width: 276px;
+     height: 288px; 
+     width: 289px;
      margin-top: -92%;
      margin-left: 10px;
      opacity: 55%;
      border-radius: 10px;
    }
+
    a:hover span.cyan{
      display: block;
    }
+
 /* 
   /* .image:hover{
     background-color: hsl(178, 100%, 50%);
