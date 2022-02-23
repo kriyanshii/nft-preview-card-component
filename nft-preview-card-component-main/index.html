@@ -16,19 +16,20 @@
     
   </style>
 </head>
-<bo
-  <div class="card">
-    <!-- <img class="image img-hover" src="./images/image-equilibrium.jpg"> -->
-    <div class="image">
-      <a>
-        <img src="./images/image-equilibrium.jpg" class="img">
-        <span class="cyan"></span>
-      </a>
-      <div class="middle">
-        <img class="view" src="./images/icon-view.svg">
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="image">
+        <a>
+          <img src="./images/image-equilibrium.jpg" class="img">
+          <span class="cyan"></span>
+        </a>
+        <div class="middle">
+          <img class="view" src="./images/icon-view.svg">
+        </div>
+        <div class="background">
+        </div> 
       </div>
-      <!-- <div class="background"></div> -->
-  </div>
     <div class = "written">
       <h3><span>Equilibrium #3429 </span></h3>
 
@@ -53,10 +54,13 @@
     </div>
     </div>
   </div>
+</div> 
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
 </body>
 
 <style>
@@ -71,77 +75,85 @@
     color:  hsl(215, 51%, 70%);
   }
 
+  .container{
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   .card{
-    background: hsl(216, 50%, 16%);
-    border: transparent solid 10px;
-    border-radius: 10px;
-    margin: 50px auto;
-    width: 25%;
-    height: 70%;
+    background-color: #14253D !important;
+    width: 300px;
+    height: 515px;
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
   }
 
   .img{
-      background-color: #00FFF7;
-      width: 92%;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: auto auto;
-      margin-top: 12px;
-      backface-visibility: hidden;
-      transition: .5s ease;
-    }
-    .img img{
-      opacity: 1;
-    }
+    background-color: #00FFF7;
+    width: 92%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    margin-top: 12px;
+    backface-visibility: hidden;
+    transition: .5s ease;
+  }
+  .img img{
+    opacity: 1;
+  }
 
-    .image{
-     position: relative;
-   }
+  .image{
+    position: relative;
+  }
+  span.cyan{
+    background-color: #00FFF7;
+    display: none;
+    position: relative;
+    height: 276px;
+    width: 276px;
+    margin-top: -92%;
+    margin-left: 10px;
+    opacity: 55%;
+    border-radius: 10px;
+  }
+  a:hover span.cyan{
+    display: block;
+  }
+
    .view{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     margin: auto auto;
-     margin-top: -52%;
-     margin-bottom: 46%;
-     opacity: 0;
-     transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-   }
-   .img::before{
-     background-color: #00FFF7;
-   }
-   .image:hover .view{
-     opacity: 1;
-     margin-right: 100px;
-     padding-top: 30px;
-     margin-bottom: 108px;
-   }
-   span.cyan{
-     background-color: #00FFF7;
-     display: none;
-     position: relative;
-     height: 288px; 
-     width: 289px;
-     margin-top: -92%;
-     margin-left: 10px;
-     opacity: 55%;
-     border-radius: 10px;
-   }
-
-   a:hover span.cyan{
-     display: block;
-   }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    margin-top: -52%;
+    margin-bottom: 46%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+  }
+  .img::before{
+    background-color: #00FFF7;
+  }
+  .image:hover .view{
+    opacity: 1;
+    margin-right: 100px;
+    padding-top: 30px;
+    margin-bottom: 108px;
+  }
 
 /* 
-  /* .image:hover{
+ .image:hover{
     background-color: hsl(178, 100%, 50%);
     opacity: 0.7;
     background-image: url(./images/icon-view.svg);
     z-index: 99;
-  }*/
+  } */
 
   .image-avatar{
     height: auto;
