@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="image">
+        <a>
+          <img src="./images/image-equilibrium.jpg" class="img">
+          <span class="cyan"></span>
+        </a>
+        <div class="middle">
+          <img class="view" src="./images/icon-view.svg">
+        </div>
+        <div class="background">
+        </div> 
+      </div>
+    <div class = "written">
+      <h3><span>Equilibrium #3429 </span></h3>
+
+      <p style="font-weight: 200">Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="one-line">
+      <div class="icon-img">
+        <img src="./images/icon-ethereum.svg" alt="icon-ethereum" height="15" width="10">
+        <p class="eth">0.041 ETH</p>
+      </div>
+      <div class="icon-img">
+        <img src="./images/icon-clock.svg" alt="icon-view" height="15" width="15">
+        <p>3 days left</p>
+      </div>
+    </div>
+
+    <div class="line-1"></div>
+
+    <div class="avatar">
+      <img class="image-avatar" src="images/image-avatar.png">
+      <p>Creation of <span>Jules Wyvern</span></p>
+    </div>
+    </div>
+  </div>
+</div> 
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+</body>
+
+<style>
+
+  body{
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', 'sans-serif';
+    color: white;
+  }
+
+  p{
+    color:  hsl(215, 51%, 70%);
+  }
+
+  .container{
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .card{
+    background-color: #14253D !important;
+    width: 300px;
+    height: 515px;
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
+  }
+
+  .img{
+    background-color: #00FFF7;
+    width: 92%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+    margin-top: 12px;
+    backface-visibility: hidden;
+    transition: .5s ease;
+  }
+  .img img{
+    opacity: 1;
+  }
+
+  .image{
+    position: relative;
+  }
+  span.cyan{
+    background-color: #00FFF7;
+    display: none;
+    position: relative;
+    height: 276px;
+    width: 276px;
+    margin-top: -92%;
+    margin-left: 10px;
+    opacity: 55%;
+    border-radius: 10px;
+  }
+  a:hover span.cyan{
+    display: block;
+  }
+
+   .view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    margin-top: -52%;
+    margin-bottom: 46%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+  }
+  .img::before{
+    background-color: #00FFF7;
+  }
+  .image:hover .view{
+    opacity: 1;
+    margin-right: 100px;
+    padding-top: 30px;
+    margin-bottom: 108px;
+  }
+
+/* 
+ .image:hover{
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.7;
+    background-image: url(./images/icon-view.svg);
+    z-index: 99;
+  } */
+
+  .image-avatar{
+    height: auto;
+    width: 30px;
+    border: 3px white solid;
+    border-radius: 50%;
+  }
+
+  .written{
+    margin: 15px;
+  }
+
+  .one-line{
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .icon-img{
+    display: flex;
+    align-items: center;
+  }
+
+  .line-1 {
+    height: 0.5px;
+    background: hsl(215, 32%, 27%);
+  }
+
+  .avatar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: small;
+    align-content: flex-start;
+  }
+
+  .eth{
+    color: hsl(178, 100%, 50%);
+    font-weight: 500;
+  }
+
+  span{
+    color: white;
+  }
+
+  span:hover{
+    color: hsl(178, 100%, 50%);
+  }
+
+</style>
+</html>
